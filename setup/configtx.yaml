@@ -135,7 +135,7 @@ Orderer: &OrdererDefaults
     OrdererType: kafka
 
     Addresses:
-        - 127.0.0.1:7050
+        - orderer.sicoob.com.br:7050
 
     # Batch Timeout: The amount of time to wait before creating a batch
     BatchTimeout: 2s
