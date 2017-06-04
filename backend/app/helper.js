@@ -178,7 +178,7 @@ var getAdminUser = function(userOrg) {
 var getRegisteredUsers = function(username, userOrg, isJson) {
 	var member;
 	var client = clientForOrg(userOrg);
-	var cop = new copService(ORGS[userOrg].ca, tlsOptions, {
+		var cop = new copService(ORGS[userOrg].ca, tlsOptions, {
 		keysize: 256,
 		hash: 'SHA2'
 	});
@@ -199,7 +199,7 @@ var getRegisteredUsers = function(username, userOrg, isJson) {
 					member = adminUserObj;
 					return cop.register({
 						enrollmentID: username,
-						affiliation: userOrg + '.department1'
+						affiliation: userOrg
 					}, member);
 				}).then((secret) => {
 					enrollmentSecret = secret;
